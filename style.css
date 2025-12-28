@@ -1,0 +1,637 @@
+body {
+  background-image: url("/assets/body\ Background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+.cream{
+ font-size: 15px;
+}
+.navbar {
+  background: rgba(255, 255, 255, 0);
+  /* backdrop-filter: blur(8px); */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid #000;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* hover text color */
+.navbar .nav-link:hover {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* underline */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+/* underline on hover */
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+
+.home-section {
+  position: relative;
+  height: 100vh;
+}
+
+.home-section img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.home-content h1 {
+  font-size: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+}
+
+
+
+
+/* ===== FLAVOR CARD ===== */
+.flavor-card {
+  background: transparent;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 420px;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+
+  transition: all 0.4s ease;
+}
+
+/* CARD HOVER */
+.flavor-card:hover {
+  transform: translateY(-14px);
+  border-color: rgba(255,255,255,0.6);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.55);
+}
+
+/* IMAGE */
+.flavor-card img {
+  height: 300px;
+  object-fit: contain;
+  margin-top: 10px;
+  margin-bottom: -8px;
+
+  transition: all 0.45s ease;
+}
+
+/* IMAGE HOVER */
+.flavor-card:hover img {
+  transform: translateY(-6px) scale(1.08);
+  filter: drop-shadow(0 12px 20px rgb(110, 167, 227));
+}
+
+/* CARD BODY */
+.flavor-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 6px 16px 26px;
+}
+
+/* TEXT */
+.flavor-card h5 {
+  color: #fff;
+}
+
+.flavor-card p {
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+}
+
+/* BUTTON */
+.flavor-btn {
+  width: 120px;
+  align-self: center;
+
+  margin-top: auto;
+  margin-bottom: 14px;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.35s ease;
+}
+
+/* BUTTON REVEAL */
+.flavor-card:hover .flavor-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== GLASS MODAL ===== */
+.glass-modal {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+
+
+/* ================= UPCOMING FLAVOURS ================= */
+
+.upcoming-section {
+  padding: 90px 0;
+  color: #fff;
+}
+
+.upcoming-sub {
+  color: rgba(255,255,255,0.7);
+}
+
+/* CARD */
+.upcoming-card {
+  background: rgba(255,255,255,0.04);
+  border-radius: 22px;
+  padding: 26px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  height: 320px;
+
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* IMAGE AS BACKGROUND */
+.upcoming-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+
+/* DARK GRADIENT OVER IMAGE */
+.upcoming-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.75)
+  );
+  z-index: 2;
+}
+
+/* CONTENT ABOVE IMAGE */
+.upcoming-card h5,
+.upcoming-card p,
+.upcoming-card .badge {
+  position: relative;
+  z-index: 3;
+}
+
+/* HOVER */
+.upcoming-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* IMAGE ZOOM ON HOVER */
+.upcoming-card:hover img {
+  transform: scale(1.12);
+}
+
+/* TEXT */
+.upcoming-card h5 {
+  color: #fff;
+  margin-top: 180px; /* pushes text down */
+  margin-bottom: 6px;
+}
+
+.upcoming-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* BADGE */
+.upcoming-card .badge {
+  position: absolute;
+  top: 18px;
+  right: -32px;
+  background: #ff4d6d;
+  padding: 6px 40px;
+  font-size: 12px;
+  transform: rotate(45deg);
+  z-index: 4;
+}
+
+
+
+
+
+
+
+.about-section {
+  padding: 80px 0;
+ 
+}
+/* ===== CONTAINER ===== */
+.about-hover-wrap {
+  position: relative;
+  width: 100%;
+  height: 360px;
+}
+
+/* ===== COMMON IMAGE STYLE ===== */
+.hover-img {
+  position: absolute;
+  width: 48%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== PAGE LOAD (OVERLAP RANDOM STYLE) ===== */
+.img1 {
+  top: 40px;
+  left: 20%;
+  transform: rotate(-12deg);
+  z-index: 4;
+}
+
+.img2 {
+  top: 20px;
+  left: 28%;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+
+.img3 {
+  top: 60px;
+  left: 24%;
+  transform: rotate(-6deg);
+  z-index: 2;
+}
+
+.img4 {
+  top: 80px;
+  left: 32%;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+/* ===== HOVER → 2x2 GRID FORMAT ===== */
+.about-hover-wrap:hover .img1 {
+  top: 0;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.about-hover-wrap:hover .img2 {
+  top: 0;
+  left: 52%;
+  transform: rotate(0deg);
+}
+
+.about-hover-wrap:hover .img3 {
+  top: 180px;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.about-hover-wrap:hover .img4 {
+  top: 180px;
+  left: 52%;
+  transform: rotate(0deg);
+}
+/* ===== GRID MODE IMAGE HOVER FOCUS ===== */
+
+/* Smooth interaction */
+.about-hover-wrap:hover .hover-img {
+  transition: all 0.4s ease;
+}
+
+/* Default grid image state */
+.about-hover-wrap:hover .hover-img {
+  transform: scale(1);
+  filter: brightness(0.9);
+}
+
+/* Focused image */
+.about-hover-wrap:hover .hover-img:hover {
+  transform: scale(1.12);
+  z-index: 10;
+  filter: brightness(1);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+}
+
+/* Other images dim when one is hovered */
+.about-hover-wrap:hover .hover-img:hover ~ .hover-img,
+.about-hover-wrap:hover .hover-img:not(:hover) {
+  filter: brightness(0.7);
+  transform: scale(0.96);
+}
+
+.contact-section {
+  padding: 80px 0;
+ 
+  color: #fff;
+}
+
+.contact-sub {
+  color: rgba(255,255,255,0.7);
+}
+
+.contact-text {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* LOCATION ICON STYLE */
+.contact-text.location i {
+  color: #ea4335; /* Google Maps red */
+  font-size: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+/* ICONS */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icons .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  color: #fff;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.contact-icons .whatsapp {
+  background: #25d366;
+}
+
+.contact-icons .instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.contact-icons .icon:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* FOOTER LINE */
+.contact-footer {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+footer {
+  background: #000;
+}
+/* =====================================================
+   TABLET VIEW (max-width: 992px)
+===================================================== */
+
+@media (max-width: 992px) {
+
+  /* NAVBAR */
+  .navbar-brand span {
+    font-size: 16px;
+  }
+
+  /* HOME */
+  .home-content {
+    left: 6%;
+  }
+
+  .home-content h1 {
+    font-size: 2.4rem;
+  }
+
+  /* FLAVORS */
+  .flavor-card {
+    height: 400px;
+  }
+
+  .flavor-card img {
+    height: 260px;
+  }
+
+  /* UPCOMING */
+  .upcoming-card {
+    height: 300px;
+  }
+
+  .upcoming-card h5 {
+    margin-top: 160px;
+  }
+
+  /* ABOUT IMAGES */
+  .about-hover-wrap {
+    height: 320px;
+  }
+
+  .hover-img {
+    height: 140px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE VIEW (max-width: 768px)
+===================================================== */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    background: rgba(0,0,0,0.75);
+  }
+
+  .navbar-collapse {
+    background: rgba(0,0,0,0.85);
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  /* HOME */
+  .home-content {
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  /* FLAVORS */
+  #flavors {
+    margin-top: 60px;
+  }
+
+  .flavor-card {
+    height: 380px;
+  }
+
+  .flavor-card img {
+    height: 240px;
+  }
+
+  .flavor-btn {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* UPCOMING */
+  .upcoming-card {
+    height: 280px;
+  }
+
+  .upcoming-card h5 {
+    margin-top: 150px;
+  }
+
+  /* ABOUT */
+  .about-section {
+    text-align: center;
+  }
+
+  .about-hover-wrap {
+    margin-top: 30px;
+    height: 340px;
+  }
+
+  /* CONTACT */
+  .contact-icons .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 24px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE (max-width: 480px)
+===================================================== */
+
+@media (max-width: 480px) {
+
+  /* NAVBAR BRAND */
+  .logo-img {
+    height: 42px;
+  }
+
+  .cream {
+    font-size: 13px;
+  }
+
+  /* HOME */
+  .home-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+  }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* FLAVOR CARDS */
+  .flavor-card {
+    height: 360px;
+  }
+
+  .flavor-card img {
+    height: 220px;
+  }
+
+  /* UPCOMING */
+  .upcoming-card {
+    height: 260px;
+  }
+
+  .upcoming-card h5 {
+    margin-top: 135px;
+  }
+
+  /* ABOUT IMAGES STACK FIX */
+  .hover-img {
+    height: 130px;
+  }
+
+  /* CONTACT */
+  .contact-text {
+    font-size: 14px;
+  }
+
+  .contact-footer {
+    font-size: 13px;
+  }
+}

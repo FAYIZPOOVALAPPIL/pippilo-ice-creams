@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pippilo Ice Creams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="/assets/Logo-removebg-preview.png" alt="Pippilo Logo" class="logo-img">
+      <span class="ms-2">Pippilo</span> <br>
+
+      <span class="ms-2 cream">Ice Creams</span>
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#flavors">Flavors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#upcoming">Upcoming</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<section id="home" class="home-section">
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="/assets/c1.png" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/assets/c2.png" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="/assets/c3.png" class="d-block w-100">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="home-content">
+    <h1>Happiness in Every Scoop</h1>
+    <p>Delicious moments, made with love</p>
+    
+  </div>
+</section>
+
+
+
+<section id="flavors" class="container text-center my-5">
+  <h2 class="section-title">Our Flavors</h2>
+
+  <div class="row g-4 mt-4">
+
+    
+    <div class="col-md-3 col-sm-6">
+      <div class="card flavor-card">
+        <img src="/assets/f-1.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Chocolate Fudge</h5>
+          <p>Rich creamy chocolate</p>
+          <button class="btn btn-outline-light flavor-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#flavorModal"
+            data-title="Chocolate Fudge"
+            data-desc="Chocolate Fudge is a rich and creamy ice cream made with premium cocoa, delivering an intense chocolate experience in every bite.">
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-3 col-sm-6">
+      <div class="card flavor-card">
+        <img src="/assets/f-2.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Strawberry Delight</h5>
+          <p>Fresh strawberry taste</p>
+          <button class="btn btn-outline-light flavor-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#flavorModal"
+            data-title="Strawberry Delight"
+            data-desc="Strawberry Delight blends fresh strawberries with creamy milk, creating a refreshing and fruity ice cream loved by all ages.">
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="col-md-3 col-sm-6">
+      <div class="card flavor-card">
+        <img src="/assets/f-3.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Mint Choco Chip</h5>
+          <p>Cool mint with chips</p>
+          <button class="btn btn-outline-light flavor-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#flavorModal"
+            data-title="Mint Choco Chip"
+            data-desc="Mint Choco Chip combines cool mint freshness with crunchy chocolate chips for a refreshing and bold flavor.">
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="col-md-3 col-sm-6">
+      <div class="card flavor-card">
+        <img src="/assets/f-4.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Mango Mania</h5>
+          <p>Sweet mango flavor</p>
+          <button class="btn btn-outline-light flavor-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#flavorModal"
+            data-title="Mango Mania"
+            data-desc="Mango Mania is a tropical delight made from ripe mangoes, offering a sweet and juicy flavor in every scoop.">
+            View
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="modal fade" id="flavorModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content glass-modal">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title text-white" id="modalTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-light text-center">
+        <p id="modalDesc"></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<section id="upcoming" class="upcoming-section">
+  <div class="container">
+    <h2 class="text-center section-title">Our Upcoming Flavours</h2>
+    <p class="text-center upcoming-sub">
+      Something sweet is on the way.
+    </p>
+
+    <div class="row mt-5 g-4">
+
+      <div class="col-md-4">
+        <div class="upcoming-card">
+          <span class="badge">Coming Soon</span>
+          <img src="/assets/top-view-blue-ice-cream-plate.jpg" alt="">
+          <h5>Blueberry Bliss</h5>
+          <p>Fresh blueberry with creamy delight</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="upcoming-card">
+          <span class="badge">Coming Soon</span>
+          <img src="/assets/pistachio.jpg" alt="">
+          <h5>Pistachio Dream</h5>
+          <p>Rich pistachio with smooth texture</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="upcoming-card">
+          <span class="badge">Coming Soon</span>
+          <img src="/assets/summer-dessert-ice-cream-ice-cream-with-coconut.jpg" alt="">
+          <h5>Caramel Crunch</h5>
+          <p>Sweet caramel with crunchy bites</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>
+          Pippilo Ice Creams is a homegrown ice cream brand that began its journey in 2019 with a simple dream and a bicycle. What started as a small cycle-based distribution soon grew into a trusted local brand loved for its taste and quality.
+
+Our story began at home, where we carefully manufactured our products using passion, creativity, and a commitment to freshness. With limited resources but unlimited dedication, we started selling our ice creams locally, directly reaching customers and building strong relationships within the community.
+
+Pippilo Ice Creams officially took shape when we joined hands with SIP UP, marking an important milestone in our growth. This partnership helped us expand our reach while continuing to maintain the homemade quality and authentic flavors that define our brand.
+
+Today, Pippilo Ice Creams stands for happiness, freshness, and trust. Every scoop reflects our journey—from a humble beginning to a growing brand—while staying true to our roots and our promise to deliver delightful ice cream experiences.
+        </p>
+       
+      </div>
+    <div class="col-md-6">
+  <div class="about-hover-wrap">
+
+    <img src="/assets/about-1.jpg" class="hover-img img1">
+    <img src="/assets/about-2.jpg" class="hover-img img2">
+    <img src="/assets/about3.jpg" class="hover-img img3">
+    <img src="/assets/about4.jpg" class="hover-img img4">
+
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="text-center mb-3">Get In Touch</h2>
+    <p class="text-center contact-sub">
+      We’d love to hear from you 
+    </p>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8 text-center">
+
+        <p class="contact-text">
+           <i class="fas fa-map-marker-alt"></i>
+            13 Street, Edarikode, Kottakkal, Malappuram, Kerala, India
+        </p>
+
+        <p class="contact-text">
+          📞 +91 81390 35097
+        </p>
+
+        <p class="contact-text">
+          ✉ info@pippilo.com
+        </p>
+
+       
+
+        <div class="contact-icons mt-4">
+          <a href="https://wa.me/918139035097" target="_blank" class="icon whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+
+          <a href="https://instagram.com/pippilo" target="_blank" class="icon instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+       
+        <p class="contact-footer mt-4">
+          Made with ❤️ & sweetness by <strong>Pippilo Ice Creams</strong>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-center py-3">
+  © 2025 Pippilo Ice Creams
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const flavorModal = document.getElementById('flavorModal');
+
+  flavorModal.addEventListener('show.bs.modal', function (event) {
+    const button = event.relatedTarget;
+
+    document.getElementById('modalTitle').innerText =
+      button.getAttribute('data-title');
+
+    document.getElementById('modalDesc').innerText =
+      button.getAttribute('data-desc');
+  });
+   document.addEventListener("click", function (event) {
+    const navbar = document.querySelector(".navbar");
+    const menu = document.getElementById("navMenu");
+    const toggler = document.querySelector(".navbar-toggler");
+
+    // If menu is open
+    if (menu.classList.contains("show")) {
+
+      // If click is NOT inside navbar
+      if (!navbar.contains(event.target)) {
+        new bootstrap.Collapse(menu).hide();
+      }
+
+      // If click is a nav-link (menu item)
+      if (event.target.classList.contains("nav-link")) {
+        new bootstrap.Collapse(menu).hide();
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
